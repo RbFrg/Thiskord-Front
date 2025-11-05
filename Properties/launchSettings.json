@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Thiskord_Front (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Thiskord_Front (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
