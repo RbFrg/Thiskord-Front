@@ -26,6 +26,8 @@ namespace Thiskord_Front
         public MainWindow()
         {
             InitializeComponent();
+            this.ExtendsContentIntoTitleBar = true;
+            this.SetTitleBar(AppTitleBar);
         }
     }
 }
