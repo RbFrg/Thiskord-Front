@@ -8,26 +8,41 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="35"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
 
-        <TextBlock 
-            Text="Connexion"
-         FontFamily="Arial"
-         FontSize="24" 
-         FontStyle="Italic" 
-         TextWrapping="WrapWholeWords"
-         CharacterSpacing="200" 
-         Foreground="CornflowerBlue"
-        HorizontalAlignment="Center"/>
+    <StackPanel Orientation="Vertical" Spacing="20"
+     HorizontalAlignment="Center" 
+     VerticalAlignment="Center">
+        <TextBlock Text="Connexion"
+     FontFamily="Arial"
+     FontSize="24" 
+     FontStyle="Italic" 
+     TextWrapping="WrapWholeWords"
+     CharacterSpacing="200" 
+     Foreground="CornflowerBlue"
+    HorizontalAlignment="Center"/>
 
-        <TextBox Header="Enter your name:" PlaceholderText="Name"
-        FontFamily="Arial"
-        FontSize="24"
-        HorizontalAlignment="Center"
-        VerticalAlignment="Center" />
-    </Grid>
+        <TextBox Width="250" Margin="0,0,8,0" Header="Nom" PlaceholderText="Username"
+    FontFamily="Arial"
+    HorizontalAlignment="Center"
+    VerticalAlignment="Center" />
+
+        <PasswordBox Header="Mot de passe" Name="passworBoxWithRevealmode" PlaceholderText="Password"
+    Width="250" Margin="0,0,8,0" Height="70"
+    PasswordRevealMode="Hidden" 
+    AutomationProperties.Name="Sample password box"/>
+
+        <Button Style="{StaticResource AccentButtonStyle}"
+    Content="Connexion"
+    FontFamily="Arial"
+    FontSize="24"
+    HorizontalAlignment="Center"
+    VerticalAlignment="Center"
+     />
+        <Button Style="{StaticResource SubtleButtonStyle}"
+            Content="Inscription"
+       FontFamily="Arial"
+       FontSize="24"
+       HorizontalAlignment="Center"
+       VerticalAlignment="Center"  />
+    </StackPanel>
 </Page>
