@@ -12,6 +12,7 @@
     <StackPanel Orientation="Vertical" Spacing="20"
      HorizontalAlignment="Center" 
      VerticalAlignment="Center">
+        
         <TextBlock Text="Connexion"
      FontFamily="Arial"
      FontSize="24" 
@@ -21,7 +22,9 @@
      Foreground="CornflowerBlue"
     HorizontalAlignment="Center"/>
 
-        <TextBox Width="250" Margin="0,0,8,0" Header="Nom" PlaceholderText="Username"
+        <TextBox Width="250" Margin="0,0,8,0" Header="Nom" PlaceholderText="Username" 
+        Text="{x:Bind ViewModel.Username, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+             IsEnabled="{x:Bind ViewModel.IsNotLoading, Mode=OneWay}"
     FontFamily="Arial"
     HorizontalAlignment="Center"
     VerticalAlignment="Center" />
@@ -29,20 +32,23 @@
         <PasswordBox Header="Mot de passe" Name="passworBoxWithRevealmode" PlaceholderText="Password"
     Width="250" Margin="0,0,8,0" Height="70"
     PasswordRevealMode="Hidden" 
-    AutomationProperties.Name="Sample password box"/>
+    AutomationProperties.Name="Sample password box" IsEnabled="{x:Bind ViewModel.IsNotLoading, Mode=OneWay}"
+    PasswordChanged="PasswordBox_PasswordChanged"/>
 
-        <Button Style="{StaticResource AccentButtonStyle}"
-    Content="Connexion"
-    FontFamily="Arial"
-    FontSize="24"
-    HorizontalAlignment="Center"
-    VerticalAlignment="Center"
-     />
+        <Button Style="{StaticResource AccentButtonStyle}" Command="{x:Bind ViewModel.LoginCommand}" 
+           IsEnabled="{x:Bind ViewModel.IsNotLoading, Mode=OneWay}"
+           Content="Connexion"
+           FontFamily="Arial"
+           FontSize="24"
+           HorizontalAlignment="Center"
+           VerticalAlignment="Center"
+        />
         <Button Style="{StaticResource SubtleButtonStyle}"
-            Content="Inscription"
-       FontFamily="Arial"
-       FontSize="24"
-       HorizontalAlignment="Center"
-       VerticalAlignment="Center"  />
+           Content="Inscription"
+           FontFamily="Arial"
+           FontSize="24"
+           HorizontalAlignment="Center"
+           VerticalAlignment="Center"  
+        />
     </StackPanel>
 </Page>
