@@ -14,20 +14,6 @@
     </Window.SystemBackdrop>
 
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="32"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-
-        <Grid x:Name="AppTitleBar" Background="Transparent" Grid.Row="0">
-            <TextBlock Text="Thiskord" 
-                       VerticalAlignment="Center" 
-                       Margin="16,0,0,0"
-                       Style="{StaticResource CaptionTextBlockStyle}"/>
-        </Grid>
-
-        <Grid Grid.Row="1" Background="Transparent">
-            <TextBlock Text="Le contenu commence ici." HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        </Grid>
+        
     </Grid>
 </Window>
