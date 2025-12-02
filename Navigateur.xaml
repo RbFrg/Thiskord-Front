@@ -7,8 +7,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    
-    <StackPanel Orientation="Vertical">
+
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Stretch">
         <DropDownButton Content="Email">
             <DropDownButton.Flyout>
                 <MenuFlyout Placement="Bottom">
@@ -27,6 +27,10 @@
         <StackPanel>
             
         </StackPanel>
-        <PersonPicture ProfilePicture="https://learn.microsoft.com/windows/uwp/contacts-and-calendar/images/shoulder-tap-static-payload.png" />
+        <PersonPicture ProfilePicture="https://learn.microsoft.com/windows/uwp/contacts-and-calendar/images/shoulder-tap-static-payload.png" 
+                       Width="50"   Height="50"
+                      VerticalAlignment="Stretch"
+                      HorizontalAlignment="Left"
+                       />
     </StackPanel>
 </Page>
