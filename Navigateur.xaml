@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <Page
     x:Class="Thiskord_Front.Navigateur"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -8,29 +7,45 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Stretch">
-        <DropDownButton Content="Email">
+    <Grid Width="125" 
+          HorizontalAlignment="Left" 
+          VerticalAlignment="Stretch"
+          Background="LightGray">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <DropDownButton Grid.Row="0" Content="Mail" HorizontalAlignment="Center" Margin="0,10,0,0">
             <DropDownButton.Flyout>
-                <MenuFlyout Placement="Bottom">
+                <MenuFlyout Placement="Right">
                     <MenuFlyoutItem Text="Send"/>
                     <MenuFlyoutItem Text="Reply"/>
-                    <MenuFlyoutItem Text="Reply All"/>
                 </MenuFlyout>
             </DropDownButton.Flyout>
         </DropDownButton>
+
         <ListView
+            Grid.Row="1"
             x:Name="BaseExample"
-            Width="350"
-            Height="400"
-            HorizontalAlignment="Left"
-         />
-        <StackPanel>
-            
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            Margin="0,10,0,10">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}" FontSize="10" HorizontalAlignment="Center"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <StackPanel Grid.Row="2" Orientation="Vertical" Padding="0,0,0,10">
+            <PersonPicture 
+                ProfilePicture="https://learn.microsoft.com/windows/uwp/contacts-and-calendar/images/shoulder-tap-static-payload.png" 
+                Width="50" Height="50"
+                HorizontalAlignment="Center"/>
         </StackPanel>
-        <PersonPicture ProfilePicture="https://learn.microsoft.com/windows/uwp/contacts-and-calendar/images/shoulder-tap-static-payload.png" 
-                       Width="50"   Height="50"
-                      VerticalAlignment="Stretch"
-                      HorizontalAlignment="Left"
-                       />
-    </StackPanel>
+
+    </Grid>
 </Page>
