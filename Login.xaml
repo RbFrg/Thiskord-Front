@@ -14,26 +14,29 @@
      VerticalAlignment="Center">
         
         <TextBlock Text="Connexion"
-     FontFamily="Arial"
-     FontSize="24" 
-     FontStyle="Italic" 
-     TextWrapping="WrapWholeWords"
-     CharacterSpacing="200" 
-     Foreground="CornflowerBlue"
-    HorizontalAlignment="Center"/>
+             FontFamily="Arial"
+             FontSize="24" 
+             FontStyle="Italic" 
+             TextWrapping="WrapWholeWords"
+             CharacterSpacing="200" 
+             Foreground="CornflowerBlue"
+            HorizontalAlignment="Center"
+        />
 
         <TextBox Width="250" Margin="0,0,8,0" Header="Nom" PlaceholderText="Username" 
         Text="{x:Bind ViewModel.Username, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
              IsEnabled="{x:Bind ViewModel.IsNotLoading, Mode=OneWay}"
-    FontFamily="Arial"
-    HorizontalAlignment="Center"
-    VerticalAlignment="Center" />
+            FontFamily="Arial"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center" 
+        />
 
         <PasswordBox Header="Mot de passe" Name="passworBoxWithRevealmode" PlaceholderText="Password"
-    Width="250" Margin="0,0,8,0" Height="70"
-    PasswordRevealMode="Hidden" 
-    AutomationProperties.Name="Sample password box" IsEnabled="{x:Bind ViewModel.IsNotLoading, Mode=OneWay}"
-    PasswordChanged="PasswordBox_PasswordChanged"/>
+            Width="250" Margin="0,0,8,0" Height="70"
+            PasswordRevealMode="Hidden" 
+            AutomationProperties.Name="Sample password box" IsEnabled="{x:Bind ViewModel.IsNotLoading, Mode=OneWay}"
+            PasswordChanged="PasswordBox_PasswordChanged"
+        />
 
         <Button Style="{StaticResource AccentButtonStyle}" Command="{x:Bind ViewModel.LoginCommand}" 
            IsEnabled="{x:Bind ViewModel.IsNotLoading, Mode=OneWay}"
