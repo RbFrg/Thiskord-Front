@@ -33,7 +33,7 @@ namespace Thiskord_Front
             CenterWindow();
 
 
-            this.Content = new Login();
+            this.Content = new Navigateur();
         }
 
         // Centers the given AppWindow on the screen based on the available display area.
