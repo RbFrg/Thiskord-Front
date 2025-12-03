@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="Thiskord_Front.commencer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Thiskord_Front"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel 
+        Orientation="Vertical"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center">
+
+        <StackPanel 
+            Orientation="Horizontal"
+            HorizontalAlignment="Center"
+            Margin="0,0,0,40">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,0,40,0">
+                <SymbolIcon Symbol="Link" VerticalAlignment="Top"/>
+                <Button Content="Github" VerticalAlignment="Bottom"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,0,40,0">
+                <SymbolIcon Symbol="Calendar" VerticalAlignment="Top"/>
+                <Button Content="Gant" VerticalAlignment="Bottom"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                <SymbolIcon Symbol="Calculator" VerticalAlignment="Top"/>
+                <Button Content="Calculs" VerticalAlignment="Bottom"/>
+            </StackPanel>
+
+        </StackPanel>
+
+        <StackPanel 
+            Orientation="Horizontal"
+            HorizontalAlignment="Center">
+
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,0,40,0">
+                <FontIcon Glyph="&#xE9D2;" VerticalAlignment="Top"/>
+                <Button Content="Graphiques" VerticalAlignment="Bottom"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,0,40,0">
+                <SymbolIcon Symbol="Comment" VerticalAlignment="Top"/>
+                <Button Content="Chat" VerticalAlignment="Bottom"/>
+            </StackPanel>
+
+        </StackPanel>
+
+    </StackPanel>
+</Page>
