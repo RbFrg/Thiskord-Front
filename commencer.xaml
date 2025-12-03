@@ -16,7 +16,7 @@
         <StackPanel 
             Orientation="Horizontal"
             HorizontalAlignment="Center" Spacing="40"
-           >
+        >
             <Border  Style="{StaticResource CaseBorderStyle}">
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
                 <SymbolIcon Symbol="Link" VerticalAlignment="Top"/>

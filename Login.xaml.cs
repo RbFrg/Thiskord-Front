@@ -37,6 +37,7 @@ public sealed partial class Login : Page
 
     private async void ShowJsonPopup(string jsonContent)
     {
+        // On vérifie que le XamlRoot est accessible (nécessaire pour WinUI 3)
         if (Content is FrameworkElement fe && fe.XamlRoot != null)
         {
             ContentDialog dialog = new ContentDialog
@@ -46,9 +47,9 @@ public sealed partial class Login : Page
                 Content = new ScrollViewer
                 {
                     MaxHeight = 600,
-                    Content = new TextBlock 
-                    { 
-                        Text = jsonContent, 
+                    Content = new TextBlock
+                    {
+                        Text = jsonContent,
                         TextWrapping = TextWrapping.Wrap,
                         FontFamily = new Microsoft.UI.Xaml.Media.FontFamily("Consolas"),
                         Padding = new Thickness(10)
@@ -58,7 +59,17 @@ public sealed partial class Login : Page
                 DefaultButton = ContentDialogButton.Primary
             };
 
-            await dialog.ShowAsync();
+            // --- C'est ici que ça se passe ---
+
+            // 1. On stocke le résultat du clic (l'exécution s'arrête ici tant que la pop-up est ouverte)
+            ContentDialogResult result = await dialog.ShowAsync();
+
+            // 2. On vérifie si l'utilisateur a cliqué sur le bouton "OK" (Primary)
+            if (result == ContentDialogResult.Primary)
+            {
+                // 3. On remplace le contenu de la fenêtre par ta nouvelle page
+                this.Content = new Navigateur();
+            }
         }
     }
 }

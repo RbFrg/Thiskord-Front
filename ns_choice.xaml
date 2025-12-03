@@ -7,95 +7,31 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <SplitView x:Name="splitView" 
-               PaneBackground="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}"
-               IsPaneOpen="True" 
-               OpenPaneLength="256" 
-               CompactPaneLength="48" 
-               DisplayMode="Inline">
+    <Grid>
 
-        <SplitView.Pane>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-            <Grid>
-                
-                <Grid.RowDefinitions>
-                    
-                    <RowDefinition Height="Auto"/>
-                    
-                    <RowDefinition Height="*"/>
-                    
-                    <RowDefinition Height="Auto"/>
-                    
-                </Grid.RowDefinitions>
-                
-                <TextBlock Text="PANE CONTENT" 
-                           x:Name="PaneHeader" 
-                           Margin="60,12,0,0" 
-                           Style="{StaticResource BaseTextBlockStyle}"/>
-                
-                <ListView x:Name="NavLinksList" 
-                          Margin="0,12,0,0" 
-                          SelectionMode="Single" 
-                          Grid.Row="1" 
-                          VerticalAlignment="Stretch"
-                          IsItemClickEnabled="True"/>
-                <DropDownButton Content="Email">
-                    <DropDownButton.Flyout>
-                        <MenuFlyout Placement="Bottom">
-                            <MenuFlyoutItem Text="Send"/>
-                            <MenuFlyoutItem Text="Reply"/>
-                            <MenuFlyoutItem Text="Reply All"/>
-                        </MenuFlyout>
-                    </DropDownButton.Flyout>
-                </DropDownButton>
-            </Grid>
-            
-        </SplitView.Pane>
+        <StackPanel Grid.Row="1" 
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Center" 
+            Orientation="Vertical" 
+            Spacing="30">
 
-        <SplitView.Content>
-            
-            <Grid>
-                
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
+            <Button Content="Créé mon projet" 
+                HorizontalAlignment="Center"
+                FontFamily="Arial"
+                FontSize="24"
+            />
 
-                <Grid Grid.Row="0">
-                    
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    
-                    <TextBlock Text="SPLITVIEW CONTENT" 
-                               Margin="12,12,0,0" 
-                               Style="{StaticResource BaseTextBlockStyle}"/>
-                    
-                    <TextBlock x:Name="content" 
-                               Grid.Row="1" 
-                               Margin="12,12,0,0" 
-                               Style="{StaticResource BodyTextBlockStyle}" />
-                </Grid>
-                
-                <StackPanel Grid.Row="1" 
-                            VerticalAlignment="Center" 
-                            HorizontalAlignment="Center" 
-                            Orientation="Vertical" 
-                            Spacing="30">
-                    
-                    <Button Content="Créé mon projet" 
-                            HorizontalAlignment="Center"
-                            FontFamily="Arial"
-                            FontSize="24"/>
-                            
-                    
-                    <Button Content="Rejoindre un projet" 
-                            HorizontalAlignment="Center"   
-                            FontFamily="Arial"
-                            FontSize="24"/>
-                </StackPanel>
-            </Grid>
-        </SplitView.Content>
-    </SplitView>
+            <Button Content="Rejoindre un projet" 
+                HorizontalAlignment="Center"   
+                FontFamily="Arial"
+                FontSize="24"
+                Click="Join_Server_Click"
+            />
+        </StackPanel>
+    </Grid>
 </Page>

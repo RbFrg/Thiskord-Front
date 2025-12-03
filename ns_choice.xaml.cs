@@ -27,5 +27,10 @@ namespace Thiskord_Front
         {
             InitializeComponent();
         }
+
+        private void Join_Server_Click(object sender, RoutedEventArgs e)
+        {
+            Navigateur.NavigateurFrame.Navigate(typeof(commencer));
+        }
     }
 }

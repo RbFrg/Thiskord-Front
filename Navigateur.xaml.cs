@@ -23,9 +23,16 @@ namespace Thiskord_Front
     /// </summary>
     public sealed partial class Navigateur : Page
     {
+        public static Frame NavigateurFrame
+        {get; set; }
+
         public Navigateur()
         {
             InitializeComponent();
+
+            NavigateurFrame = InnerFrame;
+
+            InnerFrame.Navigate(typeof(ns_choice));
         }
     }
 }
