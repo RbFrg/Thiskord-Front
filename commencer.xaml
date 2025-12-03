@@ -11,43 +11,47 @@
     <StackPanel 
         Orientation="Vertical"
         HorizontalAlignment="Center"
-        VerticalAlignment="Center">
+        VerticalAlignment="Center" Spacing="40">
 
         <StackPanel 
             Orientation="Horizontal"
-            HorizontalAlignment="Center"
-            Margin="0,0,0,40">
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,0,40,0">
+            HorizontalAlignment="Center" Spacing="40"
+           >
+            <Border  Style="{StaticResource CaseBorderStyle}">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
                 <SymbolIcon Symbol="Link" VerticalAlignment="Top"/>
                 <Button Content="Github" VerticalAlignment="Bottom"/>
-            </StackPanel>
-
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,0,40,0">
+        </StackPanel>
+             </Border>
+            <Border Style="{StaticResource CaseBorderStyle}">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
                 <SymbolIcon Symbol="Calendar" VerticalAlignment="Top"/>
                 <Button Content="Gant" VerticalAlignment="Bottom"/>
             </StackPanel>
-
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
-                <SymbolIcon Symbol="Calculator" VerticalAlignment="Top"/>
-                <Button Content="Calculs" VerticalAlignment="Bottom"/>
-            </StackPanel>
-
+            </Border>
+            <Border Style="{StaticResource CaseBorderStyle}" >
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                    <SymbolIcon Symbol="Calculator" VerticalAlignment="Top"/>
+                    <Button Content="Calculs" VerticalAlignment="Bottom"/>
+                </StackPanel>
+            </Border>
         </StackPanel>
 
         <StackPanel 
             Orientation="Horizontal"
-            HorizontalAlignment="Center">
-
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,0,40,0">
-                <FontIcon Glyph="&#xE9D2;" VerticalAlignment="Top"/>
-                <Button Content="Graphiques" VerticalAlignment="Bottom"/>
-            </StackPanel>
-
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,0,40,0">
-                <SymbolIcon Symbol="Comment" VerticalAlignment="Top"/>
-                <Button Content="Chat" VerticalAlignment="Bottom"/>
-            </StackPanel>
-
+            HorizontalAlignment="Center" Spacing="40">
+            <Border Style="{StaticResource CaseBorderStyle}">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                    <FontIcon Glyph="&#xE9D2;" VerticalAlignment="Top"/>
+                    <Button Content="Graphiques" VerticalAlignment="Bottom"/>
+                </StackPanel>
+            </Border>
+            <Border Style="{StaticResource CaseBorderStyle}">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                    <SymbolIcon Symbol="Comment" VerticalAlignment="Top"/>
+                    <Button Content="Chat" VerticalAlignment="Bottom"/>
+                </StackPanel>
+            </Border>
         </StackPanel>
 
     </StackPanel>
